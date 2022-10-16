@@ -6,9 +6,9 @@ on:
     - main
 
 jobs:
+  working-directory: ./github-actions-poc
   checkout:
     runs-on: ubuntu-latest
-    working-directory: ./github-actions-poc
     steps:
     - name: Checkout
       uses: actions/checkout@v3
