@@ -26,6 +26,7 @@ jobs:
       run: npm run build
 
   test:
+    needs: checkout
     runs-on: ubuntu-latest
     defaults:
       run:
