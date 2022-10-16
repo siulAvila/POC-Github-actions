@@ -6,7 +6,7 @@ on:
     - develop
 
 jobs:
-  env:
+  eaaaa:
     - name: Install dependencies
       run: echo ${{  secrets.TEST  }}
   test:

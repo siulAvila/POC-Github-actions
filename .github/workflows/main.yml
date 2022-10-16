@@ -6,6 +6,9 @@ on:
     - main
 
 jobs:
+  eaaaa:
+    - name: Install dependencies
+      run: echo ${{  secrets.TEST  }}
   test:
     needs: checkout
     runs-on: ubuntu-latest
