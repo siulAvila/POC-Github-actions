@@ -1,2 +1,2 @@
 # POC-Github-actions
-POC using CI flow of github actions
+POC using CI github actions flow
