@@ -7,8 +7,9 @@ on:
 
 jobs:
   eaaaa:
-      run: echo ${{  secrets.TEST  }}
-  test:
+    steps:
+    - name: Checkout
+      run: echo ${{  secrets.TEST  }}  test:
     needs: checkout
     runs-on: ubuntu-latest
     defaults:
