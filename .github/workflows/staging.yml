@@ -1,30 +1,14 @@
-name: Test
+name: Staging
 
 on:
   push:
     branches:
-    - main
+    - develop
 
 jobs:
-  checkout:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./github-actions-poc
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
+  env:
     - name: Install dependencies
-      run: npm install
-    - name: Run tests
-      run: npm run test
-    - name: Build
-      run: npm run build
-
+      run: echo ${{  secrets.TEST  }}
   test:
     needs: checkout
     runs-on: ubuntu-latest
@@ -42,3 +26,20 @@ jobs:
       run: npm install
     - name: Run tests
       run: npm run test
+  build:
+    needs: checkout
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./github-actions-poc
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - name: Install dependencies
+      run: npm install
+    - name: Build
+      run: npm run build
