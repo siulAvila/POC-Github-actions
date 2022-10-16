@@ -7,7 +7,6 @@ on:
 
 jobs:
   eaaaa:
-    - name: Install dependencies
       run: echo ${{  secrets.TEST  }}
   test:
     needs: checkout
