@@ -7,9 +7,11 @@ on:
 
 jobs:
   eaaaa:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      run: echo ${{  secrets.TEST  }}  test:
+      run: echo ${{  secrets.TEST  }}
+  test:
     needs: checkout
     runs-on: ubuntu-latest
     defaults:
