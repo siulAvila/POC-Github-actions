@@ -12,7 +12,7 @@ jobs:
     - name: Checkout
       run: echo ${{  secrets.TEST  }}
   test:
-    needs: checkout
+    needs: Checkout
     runs-on: ubuntu-latest
     defaults:
       run:
