@@ -8,6 +8,7 @@ on:
 jobs:
   Checkout:
     runs-on: ubuntu-latest
+    environment: production
     steps:
     - name: Checkout
       run: echo ${{ secrets.TEST }}
