@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      run: echo ${{  secrets.TEST  }}
+      run: echo ${{ secrets.TEST }}
   test:
     needs: Checkout
     runs-on: ubuntu-latest
